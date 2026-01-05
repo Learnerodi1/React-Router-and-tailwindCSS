@@ -10,6 +10,7 @@ const NavBar = () => {
                 <nav className="pr-7"> 
                     <Link className='decoration-[none] text-red-400 hover:underline hover:font-bold' to={"/"} >Home</Link>
                     <Link className='"decoration-[none] text-purple-400 ml-4  hover:underline hover:font-bold' to={"/about"} >About</Link>
+                    <Link className='"decoration-[none] text-green-400 ml-4  hover:underline hover:font-bold' to={"/vans"} >Vans</Link>
                 </nav>
             </header>
         </>

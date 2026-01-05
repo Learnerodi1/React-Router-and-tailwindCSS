@@ -6,6 +6,7 @@ import { About } from './component/About'
 import { Routes, Route, Link } from 'react-router-dom'
 import { Home } from './component/Home'
 import { NavBar } from './component/nav'
+import { VansPage } from './component/pages/Vans.Page'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About />} />
+        <Route path='/vans' element={<VansPage />} />
       </Routes>
     </>
 
