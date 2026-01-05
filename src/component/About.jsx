@@ -8,7 +8,7 @@ const About = () => {
                 <section>
                     <img className="h-[300px] w-[100%]" src={Aboutbg} alt="About Bg" />
                 </section>
-                <article className="p-8 flex flex-col gap-[10px] "> 
+                <article className="p-8 flex flex-col gap-[10px] ">
                     <section className="flex flex-col gap-[30px] ">
                         <h2 className="font-bold text-3xl ">Squeeze in a sedan when you could relax in a van.</h2>
                         <p>Our mission is to enliven your road trip with the perfect travel van rental. Our vans are recertified before each trip to ensure your travel plans can go off without a hitch.(Hitch costs extra 😉)</p>

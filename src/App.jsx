@@ -7,18 +7,20 @@ import { Routes, Route, Link } from 'react-router-dom'
 import { Home } from './component/Home'
 import { NavBar } from './component/nav'
 import { VansPage } from './component/pages/Vans.Page'
+import "./server.js"
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <NavBar/>
+      <NavBar />
       <Routes>
-        <Route path='/' element={<Home/>} />
+        <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/vans' element={<VansPage />} />
       </Routes>
+      {/* <VansPage/> */}
     </>
 
   )

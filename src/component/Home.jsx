@@ -5,8 +5,8 @@ import clsx from "clsx"
 const Home = () => {
     return (
         <>
-            <main className={clsx("Home p-[30px]  h-[70vh] flex justify-center items-center" )}
-                style={{ background: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${BgImg}) `, backgroundPosition:"center" }}
+            <main className={clsx("Home p-[30px]  h-[70vh] flex justify-center items-center")}
+                style={{ background: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${BgImg}) `, backgroundPosition: "center" }}
             >
                 <section className="flex flex-col gap-[40px] justify-center items-center">
                     <h1 className="text-3xl text-white">You got the travel plans, we got the travel vans.</h1>
