@@ -1,6 +1,7 @@
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
 import clsx from "clsx"
+import { vanInfo } from "./VanInfo"
 
 const Card = (props) => {
     const { imgLink, name, price, type, id } = props
@@ -22,11 +23,11 @@ const Card = (props) => {
 }
 
 const VansPage = () => {
-    const [vansdata, updateData] = useState([])
+    const [vansdata, updateData] = useState(vanInfo)
 
-    React.useEffect(() => {
-        fetch("/api/vans").then(res => res.json()).then(data => updateData(data.vans))
-    }, [0])
+    // React.useEffect(() => {
+    //     fetch("/api/vans").then(res => res.json()).then(data => updateData(data.vans))
+    // }, [0])
 
     let newElements = vansdata.map(vans =>
         <Card key={vans.id} imgLink={vans.imageUrl} name={vans.name} price={vans.price} type={vans.type} id={vans.id} />

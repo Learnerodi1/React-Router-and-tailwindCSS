@@ -6,8 +6,6 @@ const VanDescriptionPage = () => {
     const [vanData, updateData] = useState(vanInfo)
     const params = useParams()
     const [Info, updateInfo] = useState(() => vanInfo.filter(data => params.id == data.id))
-    console.log(params.id)
-    console.log(Info)
     return (
         <>
             <main className="flex justify-center items-center p-[10px] ">
