@@ -8,6 +8,7 @@ import { Home } from './component/Home'
 import { NavBar } from './component/nav'
 import { VansPage } from './component/pages/Vans.Page'
 import "./server.js"
+import { VanDescriptionPage } from './component/pages/vanPage.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/vans' element={<VansPage />} />
+        <Route path='/vans' element={<VansPage />} />
+        <Route path='/vans/:id' element={<VanDescriptionPage />}/>
       </Routes>
     </>
 

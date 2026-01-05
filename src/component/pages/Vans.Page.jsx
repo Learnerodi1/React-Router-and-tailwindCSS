@@ -1,19 +1,23 @@
 import React, { Component, useState } from "react";
+import { Link } from "react-router-dom";
 import clsx from "clsx"
 
 const Card = (props) => {
-    const { imgLink, name, price, type } = props
+    const { imgLink, name, price, type, id } = props
     return (
-        <section className={clsx("card", "flex flex-col gap-[10px] ")}>
-            <figure className="w-[300px] max-[20rem]:w-[230px] h-[200px] ">
-                <img className ={"h-[100%] w-[100%] "} src={imgLink} alt={name} />
-            </figure>
-            <article className="flex justify-between ">
-                <p className="text-green-600 font-bold">{name}</p>
-                <span><code className="font-bold">{price}</code> <br />/day</span>
-            </article>
-            <code className={clsx("px-4 py-2 rounded-md bg-black w-fit text-white ")}>{type}</code>
-        </section>
+        <Link to={`/vans/${id}`}>
+            <section className={clsx("card", "flex flex-col gap-[10px] ")}>
+                <figure className="w-[300px] max-[20rem]:w-[230px] h-[200px] ">
+                    <img className={"h-[100%] w-[100%] "} src={imgLink} alt={name} />
+                </figure>
+                <article className="flex justify-between ">
+                    <p className="text-green-600 font-bold">{name}</p>
+                    <span><code className="font-bold">{price}</code> <br />/day</span>
+                </article>
+                <code className={clsx("px-4 py-2 rounded-md bg-black w-fit text-white ")}>{type}</code>
+            </section>
+
+        </Link>
     )
 }
 
@@ -25,7 +29,7 @@ const VansPage = () => {
     }, [0])
 
     let newElements = vansdata.map(vans =>
-        <Card key={vans.id} imgLink={vans.imageUrl} name={vans.name} price={vans.price} type={vans.type} />
+        <Card key={vans.id} imgLink={vans.imageUrl} name={vans.name} price={vans.price} type={vans.type} id={vans.id} />
     )
 
     return (
