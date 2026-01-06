@@ -13,11 +13,10 @@ const Card = (props) => {
                 </figure>
                 <article className="flex justify-between ">
                     <p className="text-green-600 font-bold">{name}</p>
-                    <span><code className="font-bold">{price}</code> <br />/day</span>
+                    <span><code className="font-bold">${price}</code> <br />/day</span>
                 </article>
                 <code className={clsx("px-4 py-2 rounded-md bg-black w-fit text-white ")}>{type}</code>
             </section>
-
         </Link>
     )
 }
