@@ -9,20 +9,29 @@ import { NavBar } from './component/nav'
 import { VansPage } from './component/pages/Vans.Page'
 import "./server.js"
 import { VanDescriptionPage } from './component/pages/vanPage.jsx'
+import { HostNav } from './component/hostpages/hostnav.jsx'
+import { HostPage } from './component/hostpages/hostpage.jsx'
+import { HostLayout } from './component/hostpages/hostlayout.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <NavBar />
+      
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/vans' element={<VansPage />} />
-        <Route path='/vans' element={<VansPage />} />
-        <Route path='/vans/:id' element={<VanDescriptionPage />}/>
+        <Route element={<NavBar />}>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/vans' element={<VansPage />} />
+          <Route path='/vans' element={<VansPage />} />
+          <Route path='/vans/:id' element={<VanDescriptionPage />} />
+          <Route element={<HostLayout/>} >
+            <Route path='/host' element={<HostPage />} />
+          </Route>
+        </Route>
       </Routes>
+      {/* <HostNav/> */}
     </>
 
   )

@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import clsx from "clsx"
-import { Link } from "react-router-dom";
+import { Link,Outlet } from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -11,8 +11,10 @@ const NavBar = () => {
                     <Link className='decoration-[none] text-red-400 hover:underline hover:font-bold' to={"/"} >Home</Link>
                     <Link className='"decoration-[none] text-purple-400 ml-4  hover:underline hover:font-bold' to={"/about"} >About</Link>
                     <Link className='"decoration-[none] text-green-400 ml-4  hover:underline hover:font-bold' to={"/vans"} >Vans</Link>
+                    <Link className='"decoration-[none] text-yellow-400 ml-4  hover:underline hover:font-bold' to={"/host"} >Host</Link>
                 </nav>
             </header>
+            <Outlet/>
         </>
     )
 }
