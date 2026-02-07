@@ -24,7 +24,7 @@ const VansList = (props) => {
 }
 
 const HostVanPage = () => {
-    const elementVans = vanInfo.map((van)=> <VansList imgSrc={van.imageUrl} name={van.name} price={van.price} />)
+    const elementVans = vanInfo.map((van)=> <VansList imgSrc={van.imageUrl} name={van.name} price={van.price} key={van.id} />)
 
     return (
         <>
