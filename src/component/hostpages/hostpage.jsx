@@ -36,7 +36,7 @@ const HostPage = () => {
                 <div className={clsx("dashBoard", "p-4 bg-[#FFEAD0] py-8 ")}>
                     <h2 className="font-bold text-4xl">Welcome !</h2>
                     <p className="flex justify-between my-5 font-[verdana] ">
-                        <code>Income last 30days</code>
+                        <code>Income last <span className="underline">30days</span></code>
                         <span className="font-bold ">Details</span>
                     </p>
                     <p className="font-bold text-5xl"> $2,280</p>
