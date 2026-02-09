@@ -15,6 +15,10 @@ import { HostLayout } from './component/hostpages/hostlayout.jsx'
 import { HostReviewPage } from './component/hostpages/hostReviewPage.jsx'
 import { HostIncomePage } from './component/hostpages/hostIncome.jsx'
 import { HostVanPage } from './component/hostpages/hostVanPage.jsx'
+import { Vans } from './component/hostpages/hostvanspage.jsx'
+import { Details } from './component/hostpages/vandetails.jsx'
+import { Pricing } from './component/hostpages/pricingpage.jsx'
+import { Photo } from './component/hostpages/photo.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,16 +30,23 @@ function App() {
         <Route path='/' element={<NavBar />}>
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
-          <Route path='/vans'>
+          <Route path='vans'>
             <Route index element={<VansPage />} />
             <Route path=':id' element={<VanDescriptionPage />} />
           </Route>
 
-          <Route path='/host' element={<HostLayout />} >
+          <Route path='admin' element={<HostLayout />} >
             <Route index element={<HostPage />} />
             <Route path='review' element={<HostReviewPage />} />
             <Route path='income' element={<HostIncomePage />} />
-            <Route path='vans' element={<HostVanPage />} />
+            <Route path='vans' >
+              <Route index element={<HostVanPage />} />
+              <Route path=':id' element={<Vans />} >
+                <Route index element={<Details />} />
+                <Route path='pricing' element={<Pricing />} />
+                <Route path='photo' element={<Photo />} />
+              </Route>
+            </Route>
           </Route>
         </Route>
       </Routes>
