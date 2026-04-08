@@ -7,7 +7,7 @@ const VansList = (props) => {
     let { imgSrc, price, name,id } = props
     return (
         <>
-            <NavLink to={`${id}`}>
+            <NavLink to={id}>
                 <article className="bg-white p-4 rounded-md m-4">
                     <div className="flex align-center justify-between">
                         <code className="w-[50%] gap-[20px] flex ">

@@ -1,4 +1,5 @@
 import React, { Component, useState } from "react";
+import { Link } from "react-router-dom";
 import BgImg from "../assets/images/bgImg.png"
 import clsx from "clsx"
 
@@ -11,7 +12,7 @@ const Home = () => {
                 <section className="flex flex-col gap-[40px] justify-center items-center">
                     <h1 className="text-3xl text-white">You got the travel plans, we got the travel vans.</h1>
                     <p className="text-gray-200">Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.</p>
-                    <button className="bg-[#FF8C38] px-[60px] cursor-pointer text-white py-[10px] text-center" type="button">Find your van</button>
+                    <Link className="bg-[#FF8C38] px-[60px] cursor-pointer text-white py-[10px] text-center" to={"/vans"}>Find your van</Link>
                 </section>
             </main>
         </>

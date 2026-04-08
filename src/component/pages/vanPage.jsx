@@ -1,10 +1,15 @@
 import React, { Component, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useSearchParams, NavLink } from "react-router-dom"
 import { vanInfo } from "./VanInfo"
 
 const VanDescriptionPage = () => {
     const [vanData, updateData] = useState(vanInfo)
     const params = useParams()
+
+    
+
+
+
     // const [Info, updateInfo] = useState(null)
 
     // React.useEffect(() => {
@@ -24,7 +29,9 @@ const VanDescriptionPage = () => {
 
     return (
         <>
-            {Info ? <main className="flex justify-center items-center p-[10px] ">
+            {Info ? <main className=" items-center p-[10px]  pt-[40px]">
+                <NavLink relative="path" to={".."} className="underline">Back to all vans</NavLink>
+
                 <section className="flex justify-center items-center flex-wrap gap-[20px] pt-[40px]">
                     <figure className="w-[57%] max-[700px]:w-[100%]">
                         <img className="w-[100%] h-[500px]" src={Info.imageUrl} alt={Info.name} />

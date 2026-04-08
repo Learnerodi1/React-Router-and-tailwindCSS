@@ -1,1 +1,13 @@
 @import "tailwindcss";
+.simple{
+    background-color: orange;
+    color:white;
+}
+.rugged{
+    background-color: green;
+    color:white;
+}
+.luxury{
+    background-color: black;
+    color:white;
+}

@@ -42,7 +42,7 @@ const Vans = () => {
                     <NavLink to={"pricing"} style={({ isActive }) => isActive ? styles : null} >Pricing</NavLink>
                     <NavLink to={"photo"} style={({ isActive }) => isActive ? styles : null} >Photo</NavLink>
                 </nav>
-                <Outlet context={{van}}/>
+                <Outlet context={{ van }} />
             </main>
         </>
     )
